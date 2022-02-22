@@ -15,9 +15,11 @@ public class dHeapTester {
             test.add(i);
         }
         assertEquals(7,test.size());
-        dHeap another_test = new dHeap();
+        dHeap another_test = new dHeap(2);
         another_test.add("hello");
-        assertEquals(1,another_test.size());
+        another_test.add("world");
+        another_test.add("java");
+        assertEquals(3,another_test.size());
         dHeap mintest = new dHeap(6, 6, false);
         for (int j = 0; j < 21; j++){
             mintest.add(j);
@@ -40,7 +42,7 @@ public class dHeapTester {
         test.add(8);
         test.add(11);
         assertEquals(11, test.element());
-        dHeap another_test=new dHeap();
+        dHeap another_test=new dHeap(2);
         another_test.add("hello");
         assertEquals("hello", another_test.element());
         dHeap mintest = new dHeap(6, 6, false);
@@ -94,7 +96,7 @@ public class dHeapTester {
         }
         test.clear();
         assertEquals(0,test.size());
-        dHeap another_test = new dHeap();
+        dHeap another_test = new dHeap(2);
         another_test.add("a");
         another_test.add("b");
         another_test.add("c");
